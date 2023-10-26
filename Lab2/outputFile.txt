@@ -1,0 +1,15 @@
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+**********
+There are 10 numbers in this file
+The minimum number is 10
+The maximum number is 100
+The average is: 55.0

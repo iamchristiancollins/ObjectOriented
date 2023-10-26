@@ -1,0 +1,6 @@
+Customer Level,Name,Phone Number,Number of Orders,Previous Order,Points,Reward
+G,Dummy Customer,1.00E+02,100,Coffee,19,drink of choice
+R,Christian,,25
+G,Christian,9046873838,35,Coffee,35,Latte
+R,Christian,5555555555,2
+R,Alice,9999999999,1
