@@ -1,0 +1,15 @@
+F Mahmut Unan unan CS 4 removed
+F John Johnstone jkj CS 3
+S Jane Smith jsmith Junior Math 3.68
+T Angie Boyer angboyer Secretary Math
+A Lisa James jlisa2 Math Graduate
+S John Doe jdoe Sophomore CS 4.00
+T Rick Stein rickstein Admin Biology
+I Courtney Terrell terrellc Developer
+I Stanley Harvell stanley52 Networking
+T Nelson Miles nmiles3 Registrar CS
+F Jessica Hendricks jhend Math 2
+S Sarah Vega sarahv Senior Biology 3.87
+A Anthony Shannon ashan27 Biology Undergraduate
+A Rebecca Pendergrass rebecca25 CS Graduate
+S Mary Walker mwalkerr3 Freshman CS 4.00

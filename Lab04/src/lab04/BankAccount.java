@@ -1,78 +1,67 @@
 package lab04;
 
-import java.util.ArrayList;
-
 public class BankAccount {
+    private String name;
+    private int accNo;
+    private double balance, loanAmount;
 
-	private String name;
-	public int accNo;
-	private double loanAmount, loanLength, loanRate, balance;
+    public BankAccount(String name, int accNo, double balance) {
+        this.name = name;
+        this.accNo = accNo;
+        this.balance = balance;
+    }
 
-	// This is your constructor!
-	// Make sure to put in a String, int, and a double when creating a BankAccount
-	// object!
-	public BankAccount(String name, int accNo, double balance) {
-		this.name = name;
-		this.accNo = accNo;
-		this.balance = balance;
-	}
+    public double getBalance() {
+        return balance;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public int getAccNo() {
+        return accNo;
+    }
 
-	public String getName() {
-		return this.name;
-	}
+    public void setAccNo(int accNo) {
+        this.accNo = accNo;
+    }
 
-	// Create getter and setter for accNo
-	public int getAccNo() {
-		return this.accNo;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setAccNo(int accNo) {
-		this.accNo = accNo;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	// Create getter and setter for balance
-	public double getBalance() {
-		return this.balance;
-	}
+    public void deposit(double amount) {
+        this.balance += amount;
+    }
 
-	// TODO Create the necessary methods here
-	public void deposit(double amount) {
-		this.balance += amount;
-	}
+    public void withdraw(double amount) {
+        this.balance -= amount;
+    }
 
-	public void withdraw(double amount) {
-		this.balance -= amount;
-	}
+    public void loanGenerator(double loanPrinciple, double loanRate, double loanTime) {
+        this.loanAmount = loanPrinciple + loanPrinciple * loanRate * loanTime;
+    }
 
-	public void setLoanDetails(double loanAmount, double interest, double length) {
-		this.loanAmount = loanAmount;
-		this.loanRate = interest;
-		this.loanLength = length;
-	}
+    public double getLoanAmount() {
+        return loanAmount;
+    }
 
-	public double getLoan() {
-		return this.loanAmount + this.loanAmount*this.loanRate*this.loanLength;
-	}
+    public Boolean isArmstrong() {
+        /*
+        checks if the object's account number is an armstrong number, returns boolean
+         */
+        int accNo = this.accNo;
+        int originalNumber = accNo;
+        int remainder = 0;
+        int result = 0;
+        while (originalNumber != 0) {
+            remainder = originalNumber % 10;
+            result += Math.pow(remainder, 3);
+            originalNumber /= 10;
+        }
+        return result == accNo;
+    }
 
-	public boolean isArmstrong() {
-		int i = getAccNo();
-		ArrayList<Integer> digits = new ArrayList<Integer>();
-		while (i>0) {
-			digits.add(i % 10);
-			i /= 10;
-		}
-		int total = digits.get(0)*digits.get(0)*digits.get(0) + digits.get(1)*digits.get(1)*digits.get(1) + digits.get(2)*digits.get(2)*digits.get(2);
-		if(total == i) {
-			return true;
-		}
-		
-		
-		return false;
-	}
-	
+
 }
-	
